@@ -17,6 +17,55 @@
   </header>
 
   <main>
+    
+    <!-- Add Project Button -->
+<button id="openModal" class="add-btn">+ Add Project</button>
+
+<!-- Add Project Modal -->
+<div id="projectModal" class="modal hidden">
+  <div class="modal-content">
+    <h3>Add New Project</h3>
+    <form id="projectForm">
+      <label>Project Name: <input type="text" id="projectName" required /></label>
+
+      <label>Type:
+        <select id="projectType">
+          <option value="renovation">Renovation</option>
+          <option value="maintenance">Maintenance</option>
+        </select>
+      </label>
+
+      <label>Timeline (A–G):
+        <select id="projectCategory">
+          <option value="a">A – On Hold</option>
+          <option value="b">B – Next 1 Month</option>
+          <option value="c">C – Next 3 Months</option>
+          <option value="d">D – Next 6 Months</option>
+          <option value="e">E – Next 1 Year</option>
+          <option value="f">F – Next Few Years</option>
+          <option value="g">G – Done</option>
+        </select>
+      </label>
+
+      <label>Status:
+        <select id="projectStatus">
+          <option value="On Hold">On Hold</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Done">Done</option>
+        </select>
+      </label>
+
+      <label>Estimated Cost: <input type="number" id="projectEstimated" /></label>
+      <label>Expensed Cost: <input type="number" id="projectExpensed" /></label>
+
+      <div class="modal-actions">
+        <button type="submit">Add Project</button>
+        <button type="button" id="closeModal">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
     <!-- Renovation Section -->
     <section id="renovation" class="tab-content active">
       <h2>🛠️ Renovation Projects</h2>
