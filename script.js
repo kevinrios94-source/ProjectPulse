@@ -15,19 +15,24 @@ const openModalBtn = document.getElementById('openModal');
 const closeModalBtn = document.getElementById('closeModal');
 const modal = document.getElementById('projectModal');
 
-openModalBtn.addEventListener('click', () => {
-  modal.classList.remove('hidden');
-});
+if (openModalBtn && closeModalBtn && modal) {
+  openModalBtn.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+  });
 
-closeModalBtn.addEventListener('click', () => {
-  modal.classList.add('hidden');
-});
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
+  closeModalBtn.addEventListener('click', () => {
     modal.classList.add('hidden');
-  }
-});
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      modal.classList.add('hidden');
+    }
+  });
+} else {
+  console.error("Modal elements not found in DOM. Check element IDs.");
+}
+
 
 
 // Add/Edit/Delete functionality can go here in the future
