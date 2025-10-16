@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ProjectPulse | Home Project Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🏠 ProjectPulse</h1>
+    <nav>
+      <button class="tab active" data-tab="renovation">Renovations</button>
+      <button class="tab" data-tab="maintenance">Maintenance</button>
+      <button class="tab" data-tab="quotes">Vendor Quotes</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Renovation Section -->
+    <section id="renovation" class="tab-content active">
+      <h2>🛠️ Renovation Projects</h2>
+      <div class="project-category" data-category="b">
+        <h3>Next 1 Month</h3>
+        <div class="project-card">
+          <h4>Paint Primary Closet</h4>
+          <p>Status: On Hold</p>
+          <p>Estimated Cost: $60.00</p>
+          <p>Expensed: —</p>
+          <button>Edit</button> <button>Delete</button>
+        </div>
+      </div>
+
+      <!-- Add more A-G categories here -->
+      <button id="add-renovation" class="add-btn">+ Add Renovation</button>
+    </section>
+
+    <!-- Maintenance Section -->
+    <section id="maintenance" class="tab-content">
+      <h2>🔧 Maintenance Tasks</h2>
+      <div class="project-category" data-category="a">
+        <h3>On Hold</h3>
+        <div class="project-card">
+          <h4>Mitigate Storage Room Mold</h4>
+          <p>Status: On Hold</p>
+          <p>Estimated Cost: —</p>
+          <p>Expensed: —</p>
+          <button>Edit</button> <button>Delete</button>
+        </div>
+      </div>
+
+      <button id="add-maintenance" class="add-btn">+ Add Maintenance</button>
+    </section>
+
+    <!-- Vendor Quotes Section -->
+    <section id="quotes" class="tab-content">
+      <h2>💼 Vendor Quotes</h2>
+      <div class="quote-card">
+        <h4>Cut Back Backyard Tree</h4>
+        <ul>
+          <li>DCL Landscape & Arborer – $960</li>
+          <li>Tree Pros – $1200 / $900</li>
+          <li>Environmental Tree Care LLC – $1195</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ProjectPulse</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
