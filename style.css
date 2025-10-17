@@ -254,33 +254,7 @@ body {
 }
 
 /* Collapsible Sidebar */
-.sidebar.collapsed {
-  width: 60px;
-}
-
-.sidebar.collapsed .tab,
-.sidebar.collapsed .sidebar-header span {
-  opacity: 0;
-  pointer-events: none;
-}
-
-}
-
-.sidebar-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1.5rem;
-}
-
-.collapse-btn {
-  background: transparent;
-  color: white;
-  font-size: 1.2rem;
-  border: none;
-  cursor: pointer;
-}
-  .sidebar {
+.sidebar {
   transition: width 0.3s ease;
 }
 
@@ -288,6 +262,11 @@ body {
 .sidebar .sidebar-header span {
   transition: opacity 0.3s ease;
 }
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
 .sidebar.collapsed .tab,
 .sidebar.collapsed .sidebar-header span {
   opacity: 0;
