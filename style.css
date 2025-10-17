@@ -189,6 +189,16 @@ footer {
     padding: 1rem;
   }
 }
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+  }
+
+  .sidebar .tab,
+  .sidebar .sidebar-header span {
+    display: none;
+  }
+}
 
 
 /* Layout: Sidebar + Main */
@@ -265,3 +275,17 @@ body {
   border: none;
   cursor: pointer;
 }
+  .sidebar {
+  transition: width 0.3s ease;
+}
+
+.sidebar .tab,
+.sidebar .sidebar-header span {
+  transition: opacity 0.3s ease;
+}
+.sidebar.collapsed .tab,
+.sidebar.collapsed .sidebar-header span {
+  opacity: 0;
+  pointer-events: none;
+}
+
