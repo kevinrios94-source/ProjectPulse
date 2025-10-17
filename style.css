@@ -240,3 +240,28 @@ body {
   padding: 1rem;
   box-sizing: border-box;
 }
+
+/* Collapsible Sidebar */
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar.collapsed .sidebar-header span,
+.sidebar.collapsed .tab {
+  display: none;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.collapse-btn {
+  background: transparent;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
