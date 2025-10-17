@@ -42,13 +42,23 @@ if (toggleBtn && sidebar) {
     sidebar.classList.toggle('collapsed');
   });
 }
+const sidebar = document.querySelector('.sidebar');
+const toggleBtn = document.getElementById('toggleSidebar');
 
-// Collapse sidebar on small screens (on load)
+// Collapse on small screens on load
 window.addEventListener('DOMContentLoaded', () => {
   if (window.innerWidth <= 768) {
     sidebar.classList.add('collapsed');
   }
+
+  // Attach toggle button listener
+  if (toggleBtn && sidebar) {
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+    });
+  }
 });
+
 
 
 
