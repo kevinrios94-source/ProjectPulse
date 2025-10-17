@@ -104,6 +104,13 @@ main {
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+/*notes box */
+label textarea {
+  display: block;
+  margin-top: 0.25rem;
+  width: 100%;
+}
+
 
 /* Tabs and Sections */
 .tab-content {
