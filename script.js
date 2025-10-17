@@ -33,6 +33,13 @@ if (openModalBtn && closeModalBtn && modal) {
   console.error("Modal elements not found in DOM. Check element IDs.");
 }
 
+// Sidebar Collapse Toggle
+const sidebar = document.querySelector('.sidebar');
+const toggleBtn = document.getElementById('toggleSidebar');
+
+toggleBtn.addEventListener('click', () => {
+  sidebar.classList.toggle('collapsed');
+});
 
 
 // Add/Edit/Delete functionality can go here in the future
