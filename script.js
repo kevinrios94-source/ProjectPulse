@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Optional: Expand sidebar again on large screens
+// Expand sidebar again on large screens
 window.addEventListener('resize', () => {
   if (window.innerWidth > 768) {
     sidebar.classList.remove('collapsed');
