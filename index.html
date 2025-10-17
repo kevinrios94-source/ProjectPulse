@@ -7,11 +7,14 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Top Header -->
   <header>
     <h1>🏠 ProjectPulse</h1>
   </header>
 
+  <!-- Sidebar + Content -->
   <div class="content-wrapper">
+    
     <!-- Sidebar -->
     <div class="sidebar">
       <div class="sidebar-header">
@@ -23,23 +26,25 @@
       <button class="tab" data-tab="quotes">💼 Vendor Quotes</button>
     </div>
 
-    <!-- Main Content -->
+    <!-- Main Content Area -->
     <main>
       <!-- Add Project Button -->
       <button id="openModal" class="add-btn">+ Add Project</button>
 
-      <!-- Add Project Modal -->
+      <!-- Modal -->
       <div id="projectModal" class="modal hidden">
         <div class="modal-content">
           <h3>Add New Project</h3>
           <form id="projectForm">
             <label>Project Name: <input type="text" id="projectName" required /></label>
+
             <label>Type:
               <select id="projectType">
                 <option value="renovation">Renovation</option>
                 <option value="maintenance">Maintenance</option>
               </select>
             </label>
+
             <label>Timeline (A–G):
               <select id="projectCategory">
                 <option value="a">A – On Hold</option>
@@ -51,6 +56,7 @@
                 <option value="g">G – Done</option>
               </select>
             </label>
+
             <label>Status:
               <select id="projectStatus">
                 <option value="On Hold">On Hold</option>
@@ -58,6 +64,7 @@
                 <option value="Done">Done</option>
               </select>
             </label>
+
             <label>Estimated Cost: <input type="number" id="projectEstimated" /></label>
             <label>Expensed Cost: <input type="number" id="projectExpensed" /></label>
 
@@ -111,9 +118,11 @@
           </ul>
         </div>
       </section>
+
     </main>
   </div>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 ProjectPulse</p>
   </footer>
