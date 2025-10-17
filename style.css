@@ -78,3 +78,7 @@ header h1 {
   font-size: 1rem;
   cursor: pointer;
   tra
+  
+.hidden { 
+  display: none !important; 
+}
