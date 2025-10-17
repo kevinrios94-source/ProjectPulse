@@ -1,84 +1,181 @@
-/* ------------------ Global Styles ------------------ */
-* {
-  box-sizing: border-box;
-}
-
+/* General Reset and Layout */
 body {
-  font-family: system-ui, sans-serif;
   margin: 0;
-  background-color: #f9f9f9;
-  color: #333;
-  display: flex;
-  min-height: 100vh;
-  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
 }
 
 header {
-  background-color: #1e3a8a;
-  color: white;
+  background-color: #2c3e50;
+  color: #fff;
   padding: 1rem;
   text-align: center;
-  width: 100%;
-  z-index: 100;
 }
 
-header h1 {
-  margin: 0;
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #eee;
 }
 
-/* ------------------ Layout ------------------ */
+/* Layout Wrapper */
 .content-wrapper {
   display: flex;
-  width: 100%;
+  min-height: 100vh;
+  transition: margin-left 0.3s ease;
 }
 
+/* Sidebar Styles */
 .sidebar {
-  background-color: #1e3a8a;
-  color: white;
+  background-color: #34495e;
+  color: #fff;
   width: 220px;
+  min-height: 100vh;
   transition: width 0.3s ease;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 1rem;
-  z-index: 50;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar.collapsed {
   width: 60px;
 }
 
-.sidebar-header {
+.sidebar .sidebar-header {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  gap: 10px;
+  padding: 1rem;
+  background-color: #2c3e50;
 }
 
-.sidebar .sidebar-header span {
-  transition: opacity 0.3s ease;
-}
-
-.sidebar.collapsed .sidebar-header span,
-.sidebar.collapsed .tab {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.sidebar .tab {
-  display: block;
-  width: 100%;
-  margin: 0.5rem 0;
-  padding: 0.6rem 1rem;
-  background: transparent;
+.sidebar .collapse-btn {
+  background: none;
   border: none;
-  color: white;
-  text-align: left;
-  font-size: 1rem;
+  color: #fff;
+  font-size: 1.4rem;
   cursor: pointer;
-  tra
-  
-.hidden { 
-  display: none !important; 
+}
+
+.sidebar button.tab {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+}
+
+.sidebar button.tab:hover,
+.sidebar button.tab.active {
+  background-color: #3d566e;
+}
+
+.sidebar.collapsed button.tab {
+  display: none;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 2rem;
+  transition: margin-left 0.3s ease;
+}
+
+/* Add Button */
+.add-btn {
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Project Cards */
+.project-card,
+.quote-card {
+  background: white;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Tabs and Sections */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.modal-content label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+}
+
+.modal-content input,
+.modal-content select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    z-index: 1000;
+    height: 100vh;
+    top: 0;
+    left: 0;
+  }
+
+  .content-wrapper {
+    margin-left: 60px; /* default collapsed sidebar width */
+  }
+
+  .sidebar.collapsed ~ main {
+    margin-left: 60px;
+  }
+
+  .sidebar:not(.collapsed) ~ main {
+    margin-left: 220px;
+  }
 }
