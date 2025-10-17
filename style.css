@@ -170,8 +170,26 @@ footer {
 
 /* ------------------ Utility ------------------ */
 .hidden {
-  display: none;
+  .sidebar {
+  width: 220px;
+  transition: width 0.3s ease;
 }
+
+.sidebar .tab,
+.sidebar .sidebar-header span {
+  transition: opacity 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar.collapsed .tab,
+.sidebar.collapsed .sidebar-header span {
+  opacity: 0;
+  pointer-events: none;
+}
+
 
 /* ------------------ Responsive ------------------ */
 @media screen and (max-width: 600px) {
