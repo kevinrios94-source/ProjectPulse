@@ -40,7 +40,7 @@ const toggleBtn = document.getElementById('toggleSidebar');
 toggleBtn.addEventListener('click', () => {
   sidebar.classList.toggle('collapsed');
 });
-
+}
 
 // Add/Edit/Delete functionality can go here in the future
 // For example: dynamically add new project cards to the DOM
