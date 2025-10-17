@@ -29,7 +29,7 @@ footer {
 .sidebar {
   background-color: #34495e;
   color: #fff;
-  width: 220px;
+  width: 200px;
   min-height: 100vh;
   transition: width 0.3s ease;
   overflow: hidden;
@@ -38,7 +38,7 @@ footer {
 }
 
 .sidebar.collapsed {
-  width: 48px;
+  width: 50px;
 }
 
 .sidebar .sidebar-header {
