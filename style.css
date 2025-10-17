@@ -190,14 +190,16 @@ footer {
   }
 }
 @media screen and (max-width: 768px) {
-  .sidebar {
-    width: 60px;
-  }
+.sidebar {
+  width: 60px;
+}
 
-  .sidebar .tab,
-  .sidebar .sidebar-header span {
-    display: none;
-  }
+.sidebar .tab,
+.sidebar .sidebar-header span {
+  opacity: 0;
+  pointer-events: none;
+}
+
 }
 
 
