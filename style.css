@@ -168,29 +168,6 @@ footer {
   margin: 0 0.25rem;
 }
 
-/* ------------------ Utility ------------------ */
-.hidden {
-  .sidebar {
-  width: 220px;
-  transition: width 0.3s ease;
-}
-
-.sidebar .tab,
-.sidebar .sidebar-header span {
-  transition: opacity 0.3s ease;
-}
-
-.sidebar.collapsed {
-  width: 60px;
-}
-
-.sidebar.collapsed .tab,
-.sidebar.collapsed .sidebar-header span {
-  opacity: 0;
-  pointer-events: none;
-}
-
-
 /* ------------------ Responsive ------------------ */
 @media screen and (max-width: 600px) {
   nav {
@@ -268,8 +245,16 @@ body {
   box-sizing: border-box;
 }
 
-/* Collapsible Sidebar */
 .sidebar {
+  width: 220px;
+  background-color: #1e3a8a;
+  color: white;
+  padding: 1rem;
+  height: 100vh;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
   transition: width 0.3s ease;
 }
 
@@ -288,10 +273,20 @@ body {
   pointer-events: none;
 }
 
+
   .hidden {
   display: none;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+}
 
   
 
