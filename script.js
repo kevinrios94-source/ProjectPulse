@@ -37,17 +37,19 @@ if (openModalBtn && closeModalBtn && modal) {
 const sidebar = document.querySelector('.sidebar');
 const toggleBtn = document.getElementById('toggleSidebar');
 
-toggleBtn.addEventListener('click', () => {
-  sidebar.classList.toggle('collapsed');
-});
+if (toggleBtn && sidebar) {
+  toggleBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('collapsed');
+  });
 }
 
-// Collapse sidebar on small screens (JS fallback)
+// Collapse sidebar on small screens (on load)
 window.addEventListener('DOMContentLoaded', () => {
   if (window.innerWidth <= 768) {
     sidebar.classList.add('collapsed');
   }
 });
+
 
 
 // Add/Edit/Delete functionality can go here in the future
