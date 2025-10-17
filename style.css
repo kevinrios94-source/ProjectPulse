@@ -189,8 +189,12 @@ footer {
     padding: 1rem;
   }
 }
+
+
 /* Layout: Sidebar + Main */
 body {
+  
+.content-wrapper {
   display: flex;
   flex-direction: row;
 }
