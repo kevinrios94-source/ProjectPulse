@@ -10,123 +10,110 @@
   <header>
     <h1>🏠 ProjectPulse</h1>
   </header>
-<div class="content-wrapper">
-  <div class="sidebar">
-<div class="sidebar-header">
-  <button id="toggleSidebar" class="collapse-btn">☰</button>
-  <span>Menu</span>
-</div>
-    <button class="tab active" data-tab="renovation">🛠 Renovations</button>
-    <button class="tab" data-tab="maintenance">🔧 Maintenance</button>
-    <button class="tab" data-tab="quotes">💼 Vendor Quotes</button>
-</div>
-  </header>
-  
-  <main>
-    <!-- Add Project Button -->
-<button id="openModal" class="add-btn">+ Add Project</button>
 
-<!-- Add Project Modal -->
-<div id="projectModal" class="modal hidden">
-  <div class="modal-content">
-    <h3>Add New Project</h3>
-    <form id="projectForm">
-      <label>Project Name: <input type="text" id="projectName" required /></label>
-
-      <label>Type:
-        <select id="projectType">
-          <option value="renovation">Renovation</option>
-          <option value="maintenance">Maintenance</option>
-        </select>
-      </label>
-
-      <label>Timeline (A–G):
-        <select id="projectCategory">
-          <option value="a">A – On Hold</option>
-          <option value="b">B – Next 1 Month</option>
-          <option value="c">C – Next 3 Months</option>
-          <option value="d">D – Next 6 Months</option>
-          <option value="e">E – Next 1 Year</option>
-          <option value="f">F – Next Few Years</option>
-          <option value="g">G – Done</option>
-        </select>
-      </label>
-
-      <label>Status:
-        <select id="projectStatus">
-          <option value="On Hold">On Hold</option>
-          <option value="In Progress">In Progress</option>
-          <option value="Done">Done</option>
-        </select>
-      </label>
-
-      <label>Estimated Cost: <input type="number" id="projectEstimated" /></label>
-      <label>Expensed Cost: <input type="number" id="projectExpensed" /></label>
-
-      <div class="modal-actions">
-        <button type="submit">Add Project</button>
-        <button type="button" id="closeModal">Cancel</button>
+  <div class="content-wrapper">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <button id="toggleSidebar" class="collapse-btn">☰</button>
+        <span>Menu</span>
       </div>
-    </form>
-  </div>
-</div>
-    
+      <button class="tab active" data-tab="renovation">🛠 Renovations</button>
+      <button class="tab" data-tab="maintenance">🔧 Maintenance</button>
+      <button class="tab" data-tab="quotes">💼 Vendor Quotes</button>
+    </div>
 
-    <!-- Renovation Section -->
-<div class="main-container">
-  <main>
-    <section id="renovation" class="tab-content active">
-      <h2>🛠️ Renovation Projects</h2>
-      <div class="project-category" data-category="b">
-        <h3>Next 1 Month</h3>
-        <div class="project-card">
-          <h4>Paint Primary Closet</h4>
-          <p>Status: On Hold</p>
-          <p>Estimated Cost: $60.00</p>
-          <p>Expensed: —</p>
-          <button>Edit</button> <button>Delete</button>
+    <!-- Main Content -->
+    <main>
+      <!-- Add Project Button -->
+      <button id="openModal" class="add-btn">+ Add Project</button>
+
+      <!-- Add Project Modal -->
+      <div id="projectModal" class="modal hidden">
+        <div class="modal-content">
+          <h3>Add New Project</h3>
+          <form id="projectForm">
+            <label>Project Name: <input type="text" id="projectName" required /></label>
+            <label>Type:
+              <select id="projectType">
+                <option value="renovation">Renovation</option>
+                <option value="maintenance">Maintenance</option>
+              </select>
+            </label>
+            <label>Timeline (A–G):
+              <select id="projectCategory">
+                <option value="a">A – On Hold</option>
+                <option value="b">B – Next 1 Month</option>
+                <option value="c">C – Next 3 Months</option>
+                <option value="d">D – Next 6 Months</option>
+                <option value="e">E – Next 1 Year</option>
+                <option value="f">F – Next Few Years</option>
+                <option value="g">G – Done</option>
+              </select>
+            </label>
+            <label>Status:
+              <select id="projectStatus">
+                <option value="On Hold">On Hold</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Done">Done</option>
+              </select>
+            </label>
+            <label>Estimated Cost: <input type="number" id="projectEstimated" /></label>
+            <label>Expensed Cost: <input type="number" id="projectExpensed" /></label>
+
+            <div class="modal-actions">
+              <button type="submit">Add Project</button>
+              <button type="button" id="closeModal">Cancel</button>
+            </div>
+          </form>
         </div>
       </div>
+
+      <!-- Renovation Section -->
+      <section id="renovation" class="tab-content active">
+        <h2>🛠️ Renovation Projects</h2>
+        <div class="project-category" data-category="b">
+          <h3>Next 1 Month</h3>
+          <div class="project-card">
+            <h4>Paint Primary Closet</h4>
+            <p>Status: On Hold</p>
+            <p>Estimated Cost: $60.00</p>
+            <p>Expensed: —</p>
+            <button>Edit</button> <button>Delete</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Maintenance Section -->
+      <section id="maintenance" class="tab-content">
+        <h2>🔧 Maintenance Tasks</h2>
+        <div class="project-category" data-category="a">
+          <h3>On Hold</h3>
+          <div class="project-card">
+            <h4>Mitigate Storage Room Mold</h4>
+            <p>Status: On Hold</p>
+            <p>Estimated Cost: —</p>
+            <p>Expensed: —</p>
+            <button>Edit</button> <button>Delete</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vendor Quotes Section -->
+      <section id="quotes" class="tab-content">
+        <h2>💼 Vendor Quotes</h2>
+        <div class="quote-card">
+          <h4>Cut Back Backyard Tree</h4>
+          <ul>
+            <li>DCL Landscape & Arborer – $960</li>
+            <li>Tree Pros – $1200 / $900</li>
+            <li>Environmental Tree Care LLC – $1195</li>
+          </ul>
+        </div>
+      </section>
     </main>
   </div>
 
-
-    <!-- Maintenance Section -->
-<div class="main-container">
-  <main>
-    <section id="maintenance" class="tab-content">
-      <h2>🔧 Maintenance Tasks</h2>
-      <div class="project-category" data-category="a">
-        <h3>On Hold</h3>
-        <div class="project-card">
-          <h4>Mitigate Storage Room Mold</h4>
-          <p>Status: On Hold</p>
-          <p>Estimated Cost: —</p>
-          <p>Expensed: —</p>
-          <button>Edit</button> <button>Delete</button>
-               </div>
-      </div>
-    </main>
-  </div>
-
-
-    <!-- Vendor Quotes Section -->
-<div class="main-container">
-  <main>
-    <section id="quotes" class="tab-content">
-      <h2>💼 Vendor Quotes</h2>
-      <div class="quote-card">
-        <h4>Cut Back Backyard Tree</h4>
-        <ul>
-          <li>DCL Landscape & Arborer – $960</li>
-          <li>Tree Pros – $1200 / $900</li>
-          <li>Environmental Tree Care LLC – $1195</li>
-        </ul>
-      </div>
-    </main>
-    </div>
-</div>
-    
   <footer>
     <p>&copy; 2025 ProjectPulse</p>
   </footer>
