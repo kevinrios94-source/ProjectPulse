@@ -256,9 +256,12 @@ body {
   width: 60px;
 }
 
-.sidebar.collapsed .sidebar-header span,
-.sidebar.collapsed .tab {
-  display: none;
+.sidebar.collapsed .tab,
+.sidebar.collapsed .sidebar-header span {
+  opacity: 0;
+  pointer-events: none;
+}
+
 }
 
 .sidebar-header {
