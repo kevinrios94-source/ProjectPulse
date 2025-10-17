@@ -67,6 +67,17 @@ document.addEventListener("DOMContentLoaded", () => {
     projectForm.reset();
     modal.classList.add("hidden");
 
+    const categoryLabels = {
+  a: "On Hold",
+  b: "Next 1 Month",
+  c: "Next 3 Months",
+  d: "Next 6 Months",
+  e: "Next 1 Year",
+  f: "Next Few Years",
+  g: "Done"
+};
+
+
     // You could insert a new project card here in future
   });
 });
