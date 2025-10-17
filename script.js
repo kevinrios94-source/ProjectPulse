@@ -14,25 +14,18 @@ document.querySelectorAll('.tab').forEach(tab => {
 const sidebar = document.querySelector('.sidebar');
 const toggleBtn = document.getElementById('toggleSidebar');
 
-// Collapse sidebar on small screens on load
+// Auto-collapse on load (mobile)
 window.addEventListener('DOMContentLoaded', () => {
   if (window.innerWidth <= 768) {
     sidebar.classList.add('collapsed');
   }
-
-  if (toggleBtn && sidebar) {
-    toggleBtn.addEventListener('click', () => {
-      sidebar.classList.toggle('collapsed');
-    });
-  }
 });
 
-// Expand sidebar again on large screens
-window.addEventListener('resize', () => {
-  if (window.innerWidth > 768) {
-    sidebar.classList.remove('collapsed');
-  }
+// Toggle collapse on button click
+toggleBtn.addEventListener('click', () => {
+  sidebar.classList.toggle('collapsed');
 });
+
 
 
 
