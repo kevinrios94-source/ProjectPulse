@@ -42,5 +42,13 @@ toggleBtn.addEventListener('click', () => {
 });
 }
 
+// Collapse sidebar on small screens (JS fallback)
+window.addEventListener('DOMContentLoaded', () => {
+  if (window.innerWidth <= 768) {
+    sidebar.classList.add('collapsed');
+  }
+});
+
+
 // Add/Edit/Delete functionality can go here in the future
 // For example: dynamically add new project cards to the DOM
