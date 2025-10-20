@@ -30,14 +30,27 @@
 
     <!-- Main Content Area -->
     <main>
+      
       <!-- Add Project Button -->
-      <button id="openModal" class="add-btn">+ Add Project</button>
-
+<div class="toolbar">
+        <button id="openModal" class="add-btn">+ Add Project</button>
+        <label class="sort-control" for="sortProjects">
+          Sort by:
+          <select id="sortProjects">
+            <option value="category">Timeline</option>
+            <option value="type">Type</option>
+            <option value="status">Status</option>
+            <option value="name">Name</option>
+          </select>
+        </label>
+      </div>
+      
 <!-- Modal -->
 <div id="projectModal" class="modal hidden" role="dialog" aria-modal="true">
   <div class="modal-content">
-    <h3>Add New Project</h3>
+    <h3 id="modalTitle">Add New Project</h3>
     <form id="projectForm">
+            <input type="hidden" id="projectId" />
   <label>Project Name: <input type="text" id="projectName" required /></label>
 
   <label>Type:
@@ -81,8 +94,7 @@
   <label>Upload Files / Photos:
     <input type="file" id="projectFiles" multiple />
   </label>
-
-  <div class="modal-actions">
+    <button type="submit" id="submitProject">Add Project</button>
     <button type="submit">Add Project</button>
     <button type="button" id="closeModal">Cancel</button>
   </div>
@@ -94,31 +106,15 @@
       <!-- Renovation Section -->
       <section id="renovation" class="tab-content active">
         <h2>🛠️ Renovation Projects</h2>
-        <div class="project-category" data-category="b">
-          <h3>Next 1 Month</h3>
-          <div class="project-card">
-            <h4>Paint Primary Closet</h4>
-            <p>Status: On Hold</p>
-            <p>Estimated Cost: $60.00</p>
-            <p>Expensed: —</p>
-            <button>Edit</button> <button>Delete</button>
-          </div>
-        </div>
+        <div class="project-list" data-type="renovation"></div>
+        <p class="empty-state" data-type="renovation">No renovation projects yet. Add one to get started!</p>
       </section>
 
       <!-- Maintenance Section -->
       <section id="maintenance" class="tab-content">
         <h2>🔧 Maintenance Tasks</h2>
-        <div class="project-category" data-category="a">
-          <h3>On Hold</h3>
-          <div class="project-card">
-            <h4>Mitigate Storage Room Mold</h4>
-            <p>Status: On Hold</p>
-            <p>Estimated Cost: —</p>
-            <p>Expensed: —</p>
-            <button>Edit</button> <button>Delete</button>
-          </div>
-        </div>
+           <div class="project-list" data-type="maintenance"></div>
+        <p class="empty-state" data-type="maintenance">No maintenance tasks yet. Add one to get started!</p>
       </section>
 
       <!-- Vendor Quotes Section -->
